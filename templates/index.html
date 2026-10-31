@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhishGuard | Website Security</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f3f6fb;
+            color: #172033;
+        }
+
+        header {
+            background: #101d36;
+            color: white;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
+            color: #55d6be;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 22px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 65px 20px 35px;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            color: #64748b;
+            font-size: 17px;
+        }
+
+        .upload-card {
+            background: white;
+            max-width: 650px;
+            margin: 25px auto 60px;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+
+        .upload-card h2 {
+            margin-bottom: 12px;
+        }
+
+        .upload-card p {
+            color: #64748b;
+            margin-bottom: 25px;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 15px;
+            border: 1px dashed #8b9bb5;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background: #087e75;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #065f59;
+        }
+
+        .note {
+            margin-top: 18px;
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #64748b;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>PhishGuard</h2>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/docs">API Docs</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Phishing Website Detection</h1>
+    <p>Analyze website security data using Machine Learning.</p>
+</section>
+
+<section class="upload-card">
+    <h2>Upload Your CSV File</h2>
+    <p>Select a CSV file containing website security features for prediction.</p>
+
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+
+        <input
+            type="file"
+            name="file"
+            accept=".csv"
+            required
+        >
+
+        <button type="submit">Analyze CSV File</button>
+
+    </form>
+
+    <div class="note">
+        Your CSV must contain the 30 features expected by the trained model.
+    </div>
+</section>
+
+<footer>
+    PhishGuard | Machine Learning Based Network Security Project
+</footer>
+
+</body>
+</html>

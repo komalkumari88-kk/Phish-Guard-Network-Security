@@ -1,0 +1,42 @@
+# Environment variables and secrets
+
+# Dataset files
+Network_Data/
+valid_data/
+.env
+.env.*
+
+# Generated training artifacts
+Artifacts/
+
+# Dataset and intermediate files
+*.npy
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Logs
+logs/
+*.log
+
+# MLflow generated files
+mlruns/
+mlflow.db
+
+# Prediction output
+prediction_output/
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
